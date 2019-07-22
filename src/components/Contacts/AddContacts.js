@@ -44,11 +44,14 @@ class AddContacts extends Component {
     dispatch({ type: "ADD_CONTACT", payload: newContact });
     this.setState({ name: "", email: "", phone: "" });
 
+    // Clear form fields
     this.setState({
       name: "",
       email: "",
       phone: ""
     });
+
+    this.props.history.push("/");
   };
 
   render() {
